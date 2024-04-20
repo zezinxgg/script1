@@ -1,0 +1,161 @@
+
+local PetSim99 = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+local d = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local HumanoidFlood = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Uneffect = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+
+--Properties:
+
+PetSim99.Name = "Pet Sim 99"
+PetSim99.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+PetSim99.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+PetSim99.ResetOnSpawn = false
+
+Frame.Parent = PetSim99
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.0150273228, 0, 0.0637755096, 0)
+Frame.Size = UDim2.new(0, 53, 0, 51)
+
+ImageButton.Parent = Frame
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.113207549, 0, 0.117647059, 0)
+ImageButton.Size = UDim2.new(0, 40, 0, 39)
+ImageButton.Image = "rbxassetid://14695135672"
+
+UICorner.Parent = ImageButton
+
+UICorner_2.Parent = Frame
+
+d.Name = "d"
+d.Parent = PetSim99
+d.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+d.BorderColor3 = Color3.fromRGB(0, 0, 0)
+d.BorderSizePixel = 0
+d.Position = UDim2.new(0.157189533, 0, 0.0631658211, 0)
+d.Size = UDim2.new(0, 384, 0, 233)
+d.Visible = false
+
+UICorner_3.Parent = d
+
+TextLabel.Parent = d
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.239583328, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "AXUS.LOVE.CRACKNET"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+HumanoidFlood.Name = "HumanoidFlood"
+HumanoidFlood.Parent = d
+HumanoidFlood.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+HumanoidFlood.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HumanoidFlood.BorderSizePixel = 0
+HumanoidFlood.Position = UDim2.new(0.125, 0, 0.218884125, 0)
+HumanoidFlood.Size = UDim2.new(0, 102, 0, 27)
+HumanoidFlood.Font = Enum.Font.SourceSans
+HumanoidFlood.Text = "Velocity AntBan"
+HumanoidFlood.TextColor3 = Color3.fromRGB(255, 255, 255)
+HumanoidFlood.TextScaled = true
+HumanoidFlood.TextSize = 14.000
+HumanoidFlood.TextWrapped = true
+
+UICorner_4.Parent = HumanoidFlood
+
+Uneffect.Name = "Uneffect"
+Uneffect.Parent = d
+Uneffect.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Uneffect.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Uneffect.BorderSizePixel = 0
+Uneffect.Position = UDim2.new(0.4140625, 0, 0.218884125, 0)
+Uneffect.Size = UDim2.new(0, 23, 0, 27)
+Uneffect.Font = Enum.Font.SourceSans
+Uneffect.Text = "x"
+Uneffect.TextColor3 = Color3.fromRGB(255, 255, 255)
+Uneffect.TextScaled = true
+Uneffect.TextSize = 14.000
+Uneffect.TextWrapped = true
+
+UICorner_5.Parent = Uneffect
+
+-- Scripts:
+
+local function ASRH_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	local b = script.Parent
+	local f = script.Parent.Parent.Parent.d
+	
+	o = false
+	
+	local function oi ()
+		o = not o
+		if o then
+			f.Visible = o
+		else
+			f.Visible = o
+		end
+	end
+	
+	b.MouseButton1Click:Connect(oi)
+	
+end
+coroutine.wrap(ASRH_fake_script)()
+local function VMEIDD_fake_script() -- HumanoidFlood.LocalScript 
+	local script = Instance.new('LocalScript', HumanoidFlood)
+
+	local b = script.Parent
+	
+	local function fuckhuman ()
+		local player = game:GetService("Players").LocalPlayer
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoid = character:WaitForChild("Humanoid")
+	
+		-- Define a nova velocidade
+		local newSpeed = 50 -- Ajuste este valor conforme necessário
+	
+		-- Aumenta a velocidade do humanoid
+		humanoid.WalkSpeed = newSpeed
+	end
+	
+	b.MouseButton1Click:Connect(fuckhuman)
+end
+coroutine.wrap(VMEIDD_fake_script)()
+local function QHWN_fake_script() -- Uneffect.LocalScript 
+	local script = Instance.new('LocalScript', Uneffect)
+
+	local b = script.Parent
+	
+	local function fuckhuman ()
+		local player = game:GetService("Players").LocalPlayer
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoid = character:WaitForChild("Humanoid")
+	
+		-- Define a nova velocidade
+		local newSpeed = 15 -- Ajuste este valor conforme necessário
+	
+		-- Aumenta a velocidade do humanoid
+		humanoid.WalkSpeed = newSpeed
+	end
+	
+	b.MouseButton1Click:Connect(fuckhuman)
+end
+coroutine.wrap(QHWN_fake_script)()
